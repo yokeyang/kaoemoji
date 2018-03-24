@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-
-const Category = ({ links }) => {
+import { Link } from 'react-router-dom';
+const Category = ({ links,match }) => {
   return (
     <section className = "link">
       <h3>{links.title}</h3>
       <ul>      
         {links.data.map((key)=>{
-          return <li key={key.link}><a href = "javascript:void(0)">{key.moji}{key.text}</a></li>
+          return <li key={key.link}><Link to={`/category${key.link}`}>{key.moji}{key.text}</Link></li>
         })}
       </ul>
     </section>
@@ -37,8 +37,8 @@ export default class Categories extends Component {
   render() {
     return (
       <div className = 'categories'>
-        <Category links = {this.state.link1} />
-        <Category links = {this.state.link2} />
+        <Category links={this.state.link1} />
+        <Category links={this.state.link2} />
         <Category links={this.state.link1} />
         <Category links={this.state.link2} />
       </div>

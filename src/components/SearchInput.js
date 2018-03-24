@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 
 export default class SearchInput extends Component {
     constructor(props) {
@@ -6,7 +7,7 @@ export default class SearchInput extends Component {
         this.state = {
             bubbleDisplay: 'none',
             bubbleWidth: '5vh',
-            bubbleHeight: '5vh',            
+            bubbleHeight: '5vh',
         }
     }
     
@@ -41,9 +42,6 @@ export default class SearchInput extends Component {
         }
         return (
             <div className = "search">
-                <section className = "logo">
-                    <img alt = "logo" src = "/doge.png" />
-                </section>
                 <input
                     className = 'search-input'
                     placeholder= "kaoemoji一下 ヾ(´∀`o)+"

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../logo.svg'
 
 export default class extends Component {
@@ -9,13 +10,15 @@ export default class extends Component {
         return (
             <div className = "head">
                 <section className = "logo">
-                    <img src={logo} />
+                    <Link to = "/">
+                        <img src={logo} />
+                    </Link>
                 </section>
                 <section className = "nav">
                     <ul>
-                        <li><a href = "javascript:void(0)">首页</a></li>
-                        <li><a href = "javascript:void(0)">颜文字</a></li>
-                        <li><a href = "javascript:void(0)">emoji</a></li>                        
+                        <li><Link to = "/">首页</Link></li>
+                        <li><Link to = "/kaomoji">颜文字</Link></li>
+                        <li><Link to = "/emoji">emoji</Link></li>                        
                     </ul>
                 </section>
             </div>

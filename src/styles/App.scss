@@ -52,13 +52,6 @@ ul{
 // search
 .search{
     margin-top: 2vh;
-    .logo{
-        height: 40vh;
-        width: auto;
-        img{
-            height: 100%;
-        }
-    }
     .search-input{
         width: 49%;
         height: 2rem;
@@ -132,6 +125,13 @@ ul{
         }
     }
 }
+.doge-logo{
+    height: 40vh;
+    width: auto;
+    img{
+        height: 100%;
+    }
+}
 // categories
 .categories{
     display: flex;
@@ -155,6 +155,28 @@ ul{
             li{
                 padding: 0.25rem 0;
             }
+        }
+    }
+}
+
+// 索引页面
+.moji-index{
+    padding: 2vh 25%;
+    text-align: left;
+    h2{
+        color: black;
+        font-weight: 900;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+    }
+    .content{
+        display: flex;
+        justify-content: space-around;
+        flex-flow: wrap;
+        span{
+            display: inline-block;
+            text-align: center;
+            font-size: 2vw;
         }
     }
 }
