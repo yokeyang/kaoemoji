@@ -2,10 +2,19 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001",
+  "secure": false,
   "devDependencies": {
     "react-scripts": "1.1.1"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-multer": "^1.0.2",
+    "koa-router": "^7.4.0",
+    "mysql": "^2.15.0",
     "node-sass": "^4.7.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

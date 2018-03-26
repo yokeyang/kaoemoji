@@ -173,13 +173,60 @@ ul{
         display: flex;
         justify-content: space-around;
         flex-flow: wrap;
+        p{
+            width: 100%;
+        }
         span{
             display: inline-block;
             text-align: center;
             font-size: 2vw;
+            padding: 0.5rem 0.5rem;
+        }
+        .index{
+            width: auto;
+            color: black;
+            span{
+                font-size: 1.5rem;                
+            }
+        }
+        .kaomojilist{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-flow: wrap;            
+            span{
+                border: 2px solid #f1f1f1;
+                font-size: 1.5vw;
+                min-width: 20%;
+                cursor: pointer;
+            }
         }
     }
 }
+
+// 搜索页面
+
+.searchresult{
+    padding:1% 25%;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;    
+    h2{
+        text-align: left;
+        width:100%;        
+    }
+    h3{
+        width:100%;
+    }
+    .result{
+        display:inline-black;
+        min-width:10vw;
+        text-align:left;
+        border: 2px solid #f1f1f1;
+        font-size:1.5rem;
+    }
+}
+
 // 大尺寸
 @media (min-width:$screen-lg-med){
     .categories{
@@ -187,16 +234,14 @@ ul{
         justify-content: space-between;
         padding: 0 18%;
         width: 60vw;
-        position: absolute;
-        bottom: 2rem;
-        left: 50%;
-        transform: translate(-50%);
         .link{
             padding: 0.5rem 0;
             display: inline-block;
             width: 20%;
             min-width: 200px;
             text-align: left;
+            height: 100%;
+            border-radius: 0.5rem;
             @include background($color:#f1f1f1);
             h3{
                 padding-left: 1rem;
@@ -329,6 +374,45 @@ ul{
                 padding-left: 1rem;
                 li{
                     padding: 0.25rem 0;
+                }
+            }
+        }
+    }
+    .moji-index{
+        padding: 2vh 5%;
+        text-align: left;
+        h2{
+            color: black;
+            font-weight: 900;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+        }
+        .content{
+            display: flex;
+            justify-content: space-around;
+            flex-flow: wrap;
+            span{
+                display: inline-block;
+                text-align: center;
+                font-size: 5vw;
+                padding: 0.5rem 0.5rem;
+            }
+            .index{
+                width: auto;
+                color: black;
+                span{
+                    font-size: 1rem;                
+                }
+            }
+            .kaomojilist{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                flex-flow: wrap;            
+                span{
+                    border: 2px solid #f1f1f1;
+                    font-size: 1vw;
+                    min-width: 20%;
                 }
             }
         }

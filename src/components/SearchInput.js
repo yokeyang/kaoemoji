@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 export default class SearchInput extends Component {
     constructor(props) {
@@ -34,6 +34,12 @@ export default class SearchInput extends Component {
             return;
         };
     }
+
+    handleSubmit = (e) => {
+        e.preventDefault()
+        window.location = '/search/' + this.input.value
+    }
+
     render() {
         let bubbleStyle = {
             display: this.state.bubbleDisplay,
@@ -42,10 +48,13 @@ export default class SearchInput extends Component {
         }
         return (
             <div className = "search">
-                <input
-                    className = 'search-input'
-                    placeholder= "kaoemoji一下 ヾ(´∀`o)+"
-                />
+                <form onSubmit = {this.handleSubmit}>
+                    <input
+                        className = 'search-input'
+                        placeholder= "kaoemoji一下 ヾ(´∀`o)+"
+                        ref = {ref => this.input = ref}
+                    />
+                </form>
                 <section className = "suggestion">
                     {[1,2,3,4,5,6,7].map((key)=>{
                         return(

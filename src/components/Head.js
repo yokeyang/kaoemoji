@@ -16,9 +16,7 @@ export default class extends Component {
                 </section>
                 <section className = "nav">
                     <ul>
-                        <li><Link to = "/">首页</Link></li>
-                        <li><Link to = "/kaomoji">颜文字</Link></li>
-                        <li><Link to = "/emoji">emoji</Link></li>                        
+                        <li><Link to = "/">首页</Link></li>            
                     </ul>
                 </section>
             </div>
